@@ -1,101 +1,41 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sana Özel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CupCup</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #ffe4e1);
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      text-align: center;
+      align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 30px;
-      color: #444;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 25px;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
     }
 
     button {
-      padding: 12px 24px;
-      font-size: 18px;
+      background-color: #1DB954;
+      color: white;
+      font-size: 24px;
+      padding: 15px 30px;
       border: none;
-      border-radius: 10px;
+      border-radius: 30px;
       cursor: pointer;
-      color: white;
+      transition: background-color 0.3s ease;
     }
 
-    .play {
-      background-color: #ff5e78;
-    }
-
-    .pause {
-      background-color: #888;
-    }
-
-    .link {
-      text-decoration: none;
-      color: white;
-      background-color: #1db954;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-size: 16px;
-    }
-
-    .youtube {
-      background-color: #ff0000;
-    }
-
-    .spotify {
-      background-color: #1db954;
+    button:hover {
+      background-color: #1ed760;
     }
   </style>
 </head>
 <body>
-  <h1>Bu buton sadece sana özel</h1>
 
-  <div class="buttons">
-    <button class="play" onclick="playSong()">Başlat</button>
-    <button class="pause" onclick="pauseSong()">Durdur</button>
-  </div>
+  <button onclick="window.open('https://open.spotify.com/intl-tr/track/6wW7ZgvYwgOKCRLeqYEM6y?si=4ac5441f4b884665', '_blank')">
+    CupCup
+  </button>
 
-  <audio id="song" src="Kenan Doğulu - Ara Beni Lütfen (Official Video) #Festival.mp3"></audio>
-
-  <a class="link youtube" href="https://www.youtube.com/watch?v=2QaBwvR6G3A" target="_blank">
-    YouTube'da Dinle
-  </a>
-  <br /><br />
-  <a class="link spotify" href="https://open.spotify.com/track/2ytdiXcGQggDltO7t5jqx4" target="_blank">
-    Spotify'da Dinle
-  </a>
-
-  <script>
-    const audio = document.getElementById("song");
-
-    function playSong() {
-      audio.play().catch(err => {
-        alert("Ses oynatılamadı. Tarayıcı engelliyor olabilir.");
-        console.error(err);
-      });
-    }
-
-    function pauseSong() {
-      audio.pause();
-    }
-  </script>
 </body>
 </html>
